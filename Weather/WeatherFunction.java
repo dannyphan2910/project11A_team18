@@ -7,18 +7,41 @@ import java.util.List;
 import com.google.gson.Gson;
 
 public class WeatherFunction {
+  /*
   public static void main(String[] args) {
-    Weather weather = locationForWeather("London");
-    System.out.println("the temp is " + weather.main.temp);
-    System.out.println(weather.weather.get(0).description);
+    getWeatherCelcius("Hanoi");
   }
+  */
+
+  public static void getWeatherCelcius(String location) {
+    Weather weather = locationForWeather(location);
+
+    System.out.println(weather.weather.get(0).description.toUpperCase());
+    System.out.printf("The temperature is %.2f degrees Celcius. %n",kelvinToCelcius(weather.main.temp));
+    System.out.printf("The pressure: %.2f hPa %n",weather.main.pressure);
+    System.out.printf("The humidity: %.2f percent %n",weather.main.humidity);
+    System.out.printf("The maximum temperature: %.2f °C %n",weather.main.temp_max);
+    System.out.printf("The minimum temperature: %.2f °C %n",weather.main.temp_min);
+    System.out.printf("The wind speed: %.2f kph %n",weather.wind.speed);
+  }
+
+  public static void getWeatherFahrenheit(String location) {
+    Weather weather = locationForWeather(location);
+
+    System.out.println(weather.weather.get(0).description.toUpperCase());
+    System.out.printf("The temperature is %.2f degrees Celcius. %n",kelvinToFahrenheit(weather.main.temp));
+    System.out.printf("The pressure: %.2f hPa %n",weather.main.pressure);
+    System.out.printf("The humidity: %.2f percent %n",weather.main.humidity);
+    System.out.printf("The maximum temperature: %.2f °C %n",weather.main.temp_max);
+    System.out.printf("The minimum temperature: %.2f °C %n",weather.main.temp_min);
+    System.out.printf("The wind speed: %.2f kph %n",weather.wind.speed);
+  }
+
 
   public static Weather locationForWeather(String location) {
     //user will input city name (no spaces) -> input checking
     String APIKey = "50304844df23acee48676e4583aaf195";
     String url = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + APIKey;
-    //"https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
-
 
     String json = getStringFromURL(url);
     Gson gson = new Gson();
@@ -36,10 +59,10 @@ public class WeatherFunction {
       URL url = new URL(myURL);
       urlConn = url.openConnection();
       if (urlConn != null)
-        urlConn.setReadTimeout(60 * 1000);
+      urlConn.setReadTimeout(60 * 1000);
       if (urlConn != null && urlConn.getInputStream() != null) {
         in = new InputStreamReader(urlConn.getInputStream(),
-            Charset.defaultCharset());
+        Charset.defaultCharset());
         BufferedReader bufferedReader = new BufferedReader(in);
         if (bufferedReader != null) {
           int cp;
@@ -49,7 +72,7 @@ public class WeatherFunction {
           bufferedReader.close();
         }
       }
-    in.close();
+      in.close();
     } catch (Exception e) {
       throw new RuntimeException("Exception while calling URL:"+ myURL, e);
     }
@@ -57,7 +80,13 @@ public class WeatherFunction {
     return sb.toString();
   }
 
-//methods to convert Kelvin -> Celcius & Ferenheit (according to users' input)
+  public static double kelvinToCelcius(double kel) {
+    return kel - 273;
+  }
+
+  public static double kelvinToFahrenheit(double kel) {
+    return (9/5)*(kel - 273) + 32;
+  }
 
 }
 
@@ -69,7 +98,6 @@ class Weather{
 
 class WeatherJson {
   String description; //somehow give advice
-  String main;
 }
 
 class MainJson {
