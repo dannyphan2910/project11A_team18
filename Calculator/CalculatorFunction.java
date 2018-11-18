@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Calculator {
+public class CalculatorFunction {
 
   public static double doCaculation() { //throw 'illegal op' exception
     // get users' input of numbers (double) and operations

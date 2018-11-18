@@ -1,7 +1,7 @@
 import java.util.Calendar;
 
 // current date
-public class Calendar1{
+public class CalendarFunction{
    public static void main(String[] args) {
    Calendar calendar = Calendar.getInstance();
    System.out.println("The current date is : " + calendar.getTime());
