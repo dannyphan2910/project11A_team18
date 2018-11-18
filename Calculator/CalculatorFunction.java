@@ -1,52 +1,54 @@
-public static void main(String[] args){
-  double addition (double a, double b){
-  return a+b;
-}
-}
+import java.util.*;
 
-<<<<<<< HEAD:Calculator/CalculatorFunction.java
 public class CalculatorFunction {
-=======
-public static void main(String[] args){
-  double subtraction (double a, double b){
-  return a-b;
-}
-}
->>>>>>> d7a57c5891e3d34f0f8b4e1cc8eff0ad3be9710c:Calculator/Calculator.java
 
-public static void main (String[] args){
-  double division (double a, double b){
-  return a/b
-}
-}
-
-public static void main (String[] args){
-  double multiplication (double a, double b){
-  return a*b
-}
-}
-
-// lcm and gcd
-public static void main(String[] args){
-  System.out.println("Enter two whole numbers, one per line: ");
-  long num1 = TextIO.getlnLong();
-  long num2 = TextIO.getlnLong();
-
-  long n = num1;
-  long m = num2;
-  long count = 0;
-  while (m>0){
-    long tmp = n%m;
-    n=m;
-    m=tmp;
-
-    count++;
+  public static void main(String[] args) {
+    //for testing
+    Calculator clerk = new doCalculation();
+    try
+    {
+        System.out.println("Calculator is on.");
+        System.out.print("Format of each line: ");
+        System.out.println("operator space number");
+        System.out.println("For example: + 3");
+        System.out.println("To end, enter the letter e.");
+        clerk.doCalculation();
+    }
+    catch (UnknownOpException e)
+    {
+        clerk.handleUnknownOpException(e);
+    }
+    catch (DivideByZeroException e)
+    {
+        clerk.handleDivideByZeroException(e);
+    }
+    System.out.println("The final result is " + clerk.getResult());
+    System.out.println("Calculator program ending.");
   }
 
-<<<<<<< HEAD
-  public static double calculate(double a, char op, double b) throws DivideByZeroException, UnknownOpException
-  {
-    // your calculation methods here! USE SWICH!
+  public static double doCalculation() { //throw 'illegal op' exception
+    // get users' input of numbers (double) and operations
+    // require to hit enter (separate lines)
+
+    double result = 0; //update the result
+    Scanner scan = new Scanner(System.in);
+    boolean end = false; //to terminate the program
+
+    while (!end) {
+      char nextOp = scan.next().charAt(0); //get the operation, should throw an 'illegal op' exception here
+      if (!(nextOp == '=')) {
+        double nextNum = scan.nextDouble(); //get next number to update it with result
+        result = calculate(result, nextOp, nextNum); //calculate!
+      } else {
+        end = true; //terminate when user enter '='
+      }
+    }
+
+    return result;
+
+  }
+
+  public static double calculate(double a, char op, double b) {
     double updatedAnswer;
     switch (op) {
       case '+':
@@ -66,44 +68,46 @@ public static void main(String[] args){
       default: throw new UnknownOpException(op);
     }
     return updatedAnswer;
-
-
-
-=======
-  long lcm=num1*num2/n;
-
-  System.out.printf("The GCD of %d and %d is %d%n",num1,num2,n);
-  System.out.printf("The LCM of %d and %d is %d%n",num1,num2,lcm);
-
-  // prime numbers between Range
-  public static void main(String[] args){
-    System.out.println("Enter two positive integers");
-    int a = TextIO.getlnInt();
-    int b = TextIO.getlnInt();
-    for(int i=a; i<=b; i++){
-      prime(i);
-    }
-    System.out.println();
-
   }
-  public static void prime(int n){
-    for(int i=2; i<=Math.sqrt(n); i++){
-      if (n%i==0) {
-        return;
+
+  public void handleDivideByZeroException
+  (
+      DivideByZeroException e
+  )
+  {
+      System.out.println("Dividing by zero.");
+      System.out.println("Program aborted");
+      System.exit(0);
+  }
+
+  public void handleUnknownOpException
+  (
+      UnknownOpException e
+  )
+  {
+      System.out.println(e.getMessage());
+      System.out.println("Try again from the beginning:");
+
+      try
+      {
+          System.out.print("Format of each line: ");
+          System.out.println("operator number");
+          System.out.println("For example: + 3");
+          System.out.println("To end, enter '='.");
+          doCalculation();
       }
-    }
-
-    System.out.print(n + " ");
->>>>>>> 7f5c2956013af3bb7143a6646ccb779b8ddc5ffb
+      catch (UnknownOpException e2)
+      {
+          System.out.println(e2.getMessage());
+          System.out.println("Try again at some other time.");
+          System.out.println("Program ending.");
+          System.exit(0);
+      }
+      catch (DivideByZeroException e3)
+      {
+          handleDivideByZeroException(e3);
+      }
   }
 
-//average
-public static void main(String[] args){
 
-    double a = num1;
-    double b = num2;
-    double avg = (a+b)/2;
-
-    System.out.printf("The average is %8.2f%n",avg);
-
-//
+}

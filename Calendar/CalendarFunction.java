@@ -1,43 +1,56 @@
-import java.util.Calendar;
+import java.util.*;
 
 // current date
 public class CalendarFunction{
-   public static void main(String[] args) {
-   Calendar calendar = Calendar.getInstance();
-   System.out.println("The current date is : " + calendar.getTime());
-   calendar.add(Calendar.DATE, n);
- }
-}
-
-//future or past day
+  /*
   public static void main(String[] args) {
-  Calendar calendar = Calendar.getInstance();
-  calendar.add(Calendar.DATE, n);
-  if {(n<0)
-  System.out.println("The date %f days later is ",n + calendar.getTime());
-  } else {
-  System.out.println("The date %f days ago was ",n + calendar.getTime());
+    //for testing
+    currentDate();
+    futureDay(3);
+    futureDay(-3);
+    futureMonth(5);
+    futureYear(-2);
   }
-}
+  */
 
-//future or past month
-  public static void main(String[] args) {
+
+  public static void currentDate() {
+    Calendar calendar = Calendar.getInstance();
+    System.out.println("The current date is: " + calendar.getTime());
+  }
+
+
+  //future or past day
+  public static void futureDay(int n) {
+    Calendar calendar = Calendar.getInstance();
+    calendar.add(Calendar.DATE, n);
+    if (n>0) {
+      System.out.println("The date " + n + " days later is: " + calendar.getTime());
+    } else {
+      System.out.println("The date " + Math.abs(n) + " days ago is: " + calendar.getTime());
+    }
+  }
+
+  //future or past month
+  public static void futureMonth(int n) {
     Calendar calendar = Calendar.getInstance();
     calendar.add(Calendar.MONTH, n);
-    if {(n<0)
-    System.out.println("The date %f months later is ",n + calendar.getTime());
+    if (n>0) {
+      System.out.println("The date " + n + " months later is: " + calendar.getTime());
     } else {
-    System.out.println("The date %f months ago was ",n + calendar.getTime());
+      System.out.println("The date " + Math.abs(n) + " months ago is: " + calendar.getTime());
+    }
   }
-}
 
-//future or past year
-public static void main(String[] args) {
-  Calendar calendar = Calendar.getInstance();
-  calendar.add(Calendar.YEAR, n);
-  if {(n<0)
-  System.out.println("The date %f years later is ",n + calendar.getTime());
-  } else {
-  System.out.println("The date %f years ago was ",n + calendar.getTime());
-}
+  //future or past year
+  public static void futureYear(int n) {
+    Calendar calendar = Calendar.getInstance();
+    calendar.add(Calendar.YEAR, n);
+    if (n>0) {
+      System.out.println("The date " + n + " years later is: " + calendar.getTime());
+    } else {
+      System.out.println("The date " + Math.abs(n) + " years ago is: " + calendar.getTime());
+    }
+  }
+
 }
