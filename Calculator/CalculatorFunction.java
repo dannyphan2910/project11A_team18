@@ -39,7 +39,7 @@ public class CalculatorFunction {
       break;
       case '/':
       if (b==0) {
-        //throw DivideByZeroException();
+       DivideByZeroException();
       }
       updatedAnswer = a/b;
       break;
@@ -51,6 +51,9 @@ public class CalculatorFunction {
     return updatedAnswer;
   }
 
+public static void DivideByZeroException() {
+  System.out.println("This division is invalid because you divided by 0");
+}
 
 
 }
