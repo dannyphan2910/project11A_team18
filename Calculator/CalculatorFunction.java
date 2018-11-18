@@ -10,7 +10,18 @@ public class CalculatorFunction {
 
   class BasicOp {
     void instruction() {
-      //your code here
+      System.out.print("Hello, I am your basic operations math calculator assistant")
+      System.out.print("Start calculating your math equation by inputting a '+',followed by a space ' ', then the first number in your equation, then hit enter!")
+      Sysmte.out.print("Example: + 4[Enter]")
+      System.out.print("Then enter one of the following operations: '+','-','/','*' followed by a space ' ', and a number''")
+      System.out.print("Example: + 4[Enter]")
+      System.out.print("Example: / 2[Enter]")
+      System.out.print("Keep entering operations and numbers until your entire equation is inputted")
+      System.out.print("When you are ready to calculate the answer input '=' and press enter!")
+      System.out.print("Example: + 4[Enter]")
+      System.out.print("Example: / 2[Enter]")
+      System.out.print("Example: * 5[Enter]")
+      System.out.print("Example: =[Enter]")
     }
 
     // method to check if there's a space between the op and the input number
