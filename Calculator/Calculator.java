@@ -24,8 +24,31 @@ public class Calculator {
 
   }
 
-  public static double calculate(double a, char op, double b) {
+  public static double calculate(double a, char op, double b) throws DivideByZeroException, UnknownOpException
+  {
     // your calculation methods here! USE SWICH!
+    double updatedAnswer;
+    switch (op) {
+      case '+':
+      updatedAnswer = a+b;
+      break;
+      case '-':
+      updatedAnswer = a-b;
+      break;
+      case '/':
+      if (b==0)
+      throw new DivideByZeroException();
+      updatedAnswer = a/b;
+      break;
+      case '*':
+      updatedAnswer = a*b;
+      break;
+      default: throw new UnknownOpException(op);
+    }
+    return updatedAnswer;
+
+
+
   }
 
 
