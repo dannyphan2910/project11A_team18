@@ -4,26 +4,6 @@ public class CalculatorFunction {
 
   public static void main(String[] args) {
     //for testing
-    Calculator clerk = new doCalculation();
-    try
-    {
-        System.out.println("Calculator is on.");
-        System.out.print("Format of each line: ");
-        System.out.println("operator space number");
-        System.out.println("For example: + 3");
-        System.out.println("To end, enter the letter e.");
-        clerk.doCalculation();
-    }
-    catch (UnknownOpException e)
-    {
-        clerk.handleUnknownOpException(e);
-    }
-    catch (DivideByZeroException e)
-    {
-        clerk.handleDivideByZeroException(e);
-    }
-    System.out.println("The final result is " + clerk.getResult());
-    System.out.println("Calculator program ending.");
   }
 
   public static double doCalculation() { //throw 'illegal op' exception
@@ -58,56 +38,19 @@ public class CalculatorFunction {
       updatedAnswer = a-b;
       break;
       case '/':
-      if (b==0)
-      throw new DivideByZeroException();
+      if (b==0) {
+        //throw DivideByZeroException();
+      }
       updatedAnswer = a/b;
       break;
       case '*':
       updatedAnswer = a*b;
       break;
-      default: throw new UnknownOpException(op);
+      default: //throw new UnknownOpException();
     }
     return updatedAnswer;
   }
 
-  public void handleDivideByZeroException
-  (
-      DivideByZeroException e
-  )
-  {
-      System.out.println("Dividing by zero.");
-      System.out.println("Program aborted");
-      System.exit(0);
-  }
-
-  public void handleUnknownOpException
-  (
-      UnknownOpException e
-  )
-  {
-      System.out.println(e.getMessage());
-      System.out.println("Try again from the beginning:");
-
-      try
-      {
-          System.out.print("Format of each line: ");
-          System.out.println("operator number");
-          System.out.println("For example: + 3");
-          System.out.println("To end, enter '='.");
-          doCalculation();
-      }
-      catch (UnknownOpException e2)
-      {
-          System.out.println(e2.getMessage());
-          System.out.println("Try again at some other time.");
-          System.out.println("Program ending.");
-          System.exit(0);
-      }
-      catch (DivideByZeroException e3)
-      {
-          handleDivideByZeroException(e3);
-      }
-  }
 
 
 }
