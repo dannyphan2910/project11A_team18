@@ -3,56 +3,76 @@ import java.util.*;
 public class CalculatorFunction {
 
   public static void main(String[] args) {
-    doCalculation();
+    CalculatorFunction cf = new CalculatorFunction();
+    CalculatorFunction.BasicOp basicOp = cf.new BasicOp();
+    basicOp.doCalculation();
   }
 
-  public static void doCalculation() { //throw 'illegal op' exception
-    // get users' input of numbers (double) and operations
-    // require to hit enter (separate lines)
-
-    double result = 0; //update the result
-    Scanner scan = new Scanner(System.in);
-    boolean end = false; //to terminate the program
-
-    while (!end) {
-      char nextOp = scan.next().charAt(0); //get the operation, should throw an 'illegal op' exception here
-      if (!(nextOp == '=')) {
-        double nextNum = scan.nextDouble(); //get next number to update it with result
-        result = calculate(result, nextOp, nextNum); //calculate!
-      } else {
-        end = true; //terminate when user enter '='
-      }
+  class BasicOp {
+    void instruction() {
+      //your code here
     }
 
-    System.out.println(result);
+    // method to check if there's a space between the op and the input number
 
-  }
+    void doCalculation() { //throw 'illegal op' exception
+      // get users' input of numbers (double) and operations
+      // require to hit enter (separate lines)
 
-  public static double calculate(double a, char op, double b) {
-    double updatedAnswer = 0;
-    switch (op) {
-      case '+': updatedAnswer = a + b; break;
-      case '-': updatedAnswer = a - b; break;
-      case '*': updatedAnswer = a * b; break;
-      case '/':
-        if (b==0) {
-          DivideByZeroException();
+      double result = 0; //update the result
+      Scanner scan = new Scanner(System.in);
+      boolean end = false; //to terminate the program
+
+      while (!end) {
+        char nextOp = scan.next().charAt(0); //get the operation, should throw an 'illegal op' exception here
+        if (!(nextOp == '=')) {
+          double nextNum = scan.nextDouble(); //get next number to update it with result
+          result = calculate(result, nextOp, nextNum); //calculate!
         } else {
-          updatedAnswer = a / b;
+          end = true; //terminate when user enter '='
         }
-        break;
-      default: UnknownOpException(op);
+      }
+
+      System.out.println(result);
+
     }
 
-    return updatedAnswer;
+    double calculate(double a, char op, double b) {
+      double updatedAnswer = 0;
+      switch (op) {
+        case '+': updatedAnswer = a + b; break;
+        case '-': updatedAnswer = a - b; break;
+        case '*': updatedAnswer = a * b; break;
+        case '/':
+          if (b==0) {
+            DivideByZeroException();
+          } else {
+            updatedAnswer = a / b;
+          }
+          break;
+        default: UnknownOpException(op);
+      }
+
+      return updatedAnswer;
+    }
+
+    void UnknownOpException(char op){
+      System.out.println("Symbol is unvalid, I do not recognize the operation" + op);
+    }
+
+    void DivideByZeroException() {
+      System.out.println("This division is invalid because you divided by 0");
+    }
   }
 
-  public static void UnknownOpException(char op){
-    System.out.println("Symbol is unvalid, I do not recognize the operation" + op);
+  class ExpOp {
+    //method return double, input double (Math.sqrt)
+    // .... input 2 doubles (Math.pow)
   }
 
-  public static void DivideByZeroException() {
-    System.out.println("This division is invalid because you divided by 0");
+  class AdvancedOp{
+
   }
+
 
 }
