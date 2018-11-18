@@ -66,8 +66,19 @@ public class CalculatorFunction {
   }
 
   class ExpOp {
-    //method return double, input double (Math.sqrt)
-    // .... input 2 doubles (Math.pow)
+    void instruction() {
+      // instruction code
+    }
+
+    public double pow (double a, double b){
+      int powAnswer = (int) Math.pow(a,b);
+    }
+
+    public double square (double a){
+      int squareAnswer = (int) Math.sqrt(a);
+
+    }
+
   }
 
   class AdvancedOp{
