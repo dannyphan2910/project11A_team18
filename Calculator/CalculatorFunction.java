@@ -46,11 +46,14 @@ public class CalculatorFunction {
       case '*':
       updatedAnswer = a*b;
       break;
-      default: //throw new UnknownOpException();
+      default: UnknownOpException(op);
     }
     return updatedAnswer;
   }
 
+public static void UnknownOpException(char op){
+  System.out.println("Symbol is unvalid, I do not recognize the operation" + op);
 
+}
 
 }
