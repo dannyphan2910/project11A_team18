@@ -3,10 +3,10 @@ import java.util.*;
 public class CalculatorFunction {
 
   public static void main(String[] args) {
-    //for testing
+    doCalculation();
   }
 
-  public static double doCalculation() { //throw 'illegal op' exception
+  public static void doCalculation() { //throw 'illegal op' exception
     // get users' input of numbers (double) and operations
     // require to hit enter (separate lines)
 
@@ -24,37 +24,33 @@ public class CalculatorFunction {
       }
     }
 
-    return result;
+    System.out.println(result);
 
   }
 
   public static double calculate(double a, char op, double b) {
-    double updatedAnswer;
+    double updatedAnswer = 0;
     switch (op) {
-      case '+':
-      updatedAnswer = a+b;
-      break;
-      case '-':
-      updatedAnswer = a-b;
-      break;
+      case '+': updatedAnswer = a + b; break;
+      case '-': updatedAnswer = a - b; break;
+      case '*': updatedAnswer = a * b; break;
       case '/':
-      if (b==0) {
-        DivideByZeroException();
-      }
-      updatedAnswer = a/b;
-      break;
-      case '*':
-      updatedAnswer = a*b;
-      break;
+        if (b==0) {
+          DivideByZeroException();
+        } else {
+          updatedAnswer = a / b;
+        }
+        break;
       default: UnknownOpException(op);
     }
+
     return updatedAnswer;
   }
 
   public static void UnknownOpException(char op){
     System.out.println("Symbol is unvalid, I do not recognize the operation" + op);
   }
-  
+
   public static void DivideByZeroException() {
     System.out.println("This division is invalid because you divided by 0");
   }
