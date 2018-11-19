@@ -8,9 +8,18 @@ public class CalculatorFunction {
     CalculatorFunction.BasicOp basicOp = cf.new BasicOp();
     basicOp.doCalculation();
     */
+    /*
     CalculatorFunction.ExpOp expOp = cf.new ExpOp();
     expOp.pow(2.5,5.4);
     expOp.square(121);
+    */
+    CalculatorFunction.AdvancedOp adOp = cf.new AdvancedOp();
+    adOp.factorial(6);
+    adOp.primeCheck(34);
+    adOp.primeCheck(13);
+    adOp.GCD(7,31);
+    adOp.GCD(50,122);
+    adOp.LCM(7,31);
   }
 
   class BasicOp {
@@ -109,6 +118,7 @@ public class CalculatorFunction {
         for(int i=2; i<=Math.sqrt(p); i++){
           if (p%i==0) {
             System.out.printf("%d is not prime%n it is %d * %d%n%n",p,i,p/i);
+            return;
           }
         }
         System.out.printf("%d is prime%n",p);
@@ -128,7 +138,16 @@ public class CalculatorFunction {
     }
 
     void LCM(int a, int b) {
-      long l = (a*b)/GCD(a,b);
+      long n = a;
+      long m = b;
+
+      while (m>0){
+        long tmp = n%m;
+        n=m;
+        m=tmp;
+      }
+
+      long l = (a*b)/n;
       System.out.printf("The LCM of %d and %d is %d%n",a,b,l);    }
   }
 
