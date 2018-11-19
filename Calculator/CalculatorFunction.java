@@ -105,11 +105,23 @@ public class CalculatorFunction {
     }
 
     void GCD(int a, int b) {
+      long n = a;
+      long m = b;
+
+      while (m>0){
+        long tmp = n%m;
+        n=m;
+        m=tmp;
+        System.out.printf("The GCD of %d and %d is %d%n",a,b,CalcGCD(a,b));
+
+      }
 
     }
 
     void LCM(int a, int b) {
-
+      long l = (a*b)/n;
+      System.out.printf("The LCM of %d and %d is %d%n",a,b,l);
+      
     }
   }
 
