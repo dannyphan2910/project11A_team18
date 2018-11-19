@@ -96,6 +96,7 @@ public class CalculatorFunction {
   }
 
   class AdvancedOp{
+
     void factorial(int n) {
       int k = 1;
       for (int i = n; i >= 1; i--) {
@@ -114,12 +115,21 @@ public class CalculatorFunction {
     }
 
     void GCD(int a, int b) {
+      long n = a;
+      long m = b;
 
+      while (m>0){
+        long tmp = n%m;
+        n=m;
+        m=tmp;
+      }
+
+      System.out.printf("The GCD of %d and %d is %d%n",a,b,n);
     }
 
     void LCM(int a, int b) {
-
-    }
+      long l = (a*b)/GCD(a,b);
+      System.out.printf("The LCM of %d and %d is %d%n",a,b,l);    }
   }
 
 
