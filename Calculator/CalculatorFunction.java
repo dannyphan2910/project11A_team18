@@ -4,22 +4,31 @@ public class CalculatorFunction {
 
   public static void main(String[] args) {
     CalculatorFunction cf = new CalculatorFunction();
-    /*
     CalculatorFunction.BasicOp basicOp = cf.new BasicOp();
     basicOp.doCalculation();
-    */
-    CalculatorFunction.ExpOp expOp = cf.new ExpOp();
-    expOp.pow(2.5,5.4);
-    expOp.square(121);
   }
 
   class BasicOp {
-
+    void instruction() {
+      System.out.print("Hello, I am your basic operations math calculator assistant")
+      System.out.print("Start calculating your math equation by inputting a '+',followed by a space ' ', then the first number in your equation. Hit enter.")
+      Sysmte.out.print("Example: + 4[Enter]")
+      System.out.print("Then enter one of the following operations: '+','-','/','*' followed by a space ' ' and a number. Hit enter.")
+      System.out.print("Example: + 4[Enter]")
+      System.out.print("Example: / 2[Enter]")
+      System.out.print("Keep entering lines of operations and numbers until your entire equation is inputted")
+      System.out.print("When you are ready to calculate the answer, input '=' and press enter. Voila!")
+      System.out.print("Example: + 4[Enter]")
+      System.out.print("Example: / 2[Enter]")
+      System.out.print("Example: * 5[Enter]")
+      System.out.print("Example: =[Enter]")
+    }
 
     // method to check if there's a space between the op and the input number
 
     void doCalculation() { //throw 'illegal op' exception
-      instruction();
+      // get users' input of numbers (double) and operations
+      // require to hit enter (separate lines)
 
       double result = 0; //update the result
       Scanner scan = new Scanner(System.in);
@@ -37,23 +46,6 @@ public class CalculatorFunction {
 
       System.out.println(result);
 
-    }
-
-    void instruction() {
-      System.out.println("Hello, I am your basic operations math calculator assistant");
-      System.out.println("Start calculating your math equation by inputting a '+' or '-',");
-      System.out.println("followed by a space ' ', then the first number in your equation, then hit enter!");
-      System.out.println("  Example:+ 4[Enter]");
-      System.out.println("Then enter one of the following operations: '+','-','/','*' followed by a space ' ', and a number");
-      //System.out.println("Example: + 4[Enter]");
-      System.out.println("  Example:/ 2[Enter]");
-      System.out.println("Keep entering operations and numbers until your entire equation is inputted");
-      System.out.println("When you are ready to calculate the answer input '=' and press enter!");
-      //System.out.println("Example: + 4[Enter]");
-      //System.out.println("Example: / 2[Enter]");
-      //System.out.println("Example: * 5[Enter]");
-      //System.out.println("Example: =[Enter]");
-      System.out.println("___________________________________________________");
     }
 
     double calculate(double a, char op, double b) {
@@ -85,14 +77,8 @@ public class CalculatorFunction {
   }
 
   class ExpOp {
-    void pow(double a, double b){
-      System.out.printf("%.2f to the power of %.2f is %.2f %n",a,b,Math.pow(a,b));
-    }
-
-    void square(double a){
-      System.out.printf("The square root of %.2f is %.2f %n",a,Math.sqrt(a));
-    }
-
+    //method return double, input double (Math.sqrt)
+    // .... input 2 doubles (Math.pow)
   }
 
   class AdvancedOp{
@@ -112,16 +98,14 @@ public class CalculatorFunction {
         long tmp = n%m;
         n=m;
         m=tmp;
-        System.out.printf("The GCD of %d and %d is %d%n",a,b,CalcGCD(a,b));
-
       }
 
+      System.out.printf("The GCD of %d and %d is %d%n",a,b,n);
     }
 
     void LCM(int a, int b) {
-      long l = (a*b)/n;
+      long l = (a*b)/GCD(a,b);
       System.out.printf("The LCM of %d and %d is %d%n",a,b,l);
-      
     }
   }
 
