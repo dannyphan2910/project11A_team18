@@ -24,9 +24,6 @@ public class CalculatorFunction {
 
   class BasicOp {
 
-
-    // method to check if there's a space between the op and the input number
-
     void doCalculation() { //throw 'illegal op' exception
       instruction();
 
