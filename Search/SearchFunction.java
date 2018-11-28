@@ -14,7 +14,7 @@ public class SearchFunction {
 
 	public static void main(String[] args) {
 		//for testing
-		search("Superman");
+		search("Williamstown");
 	}
 
 	public static void search(String searchText) {
