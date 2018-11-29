@@ -1,3 +1,5 @@
+package search;
+
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.awt.Desktop;
@@ -11,12 +13,12 @@ import org.jsoup.select.Elements;
 //java -classpath ".:jsoup-1.10.2.jar:SimpleTTS.jar" SearchFunction
 
 public class SearchFunction {
-
+	/*
 	public static void main(String[] args) {
 		//for testing
 		search("Williamstown");
 	}
-
+	*/
 	public static void search(String searchText) {
 
 		String encoding = "UTF-8";
