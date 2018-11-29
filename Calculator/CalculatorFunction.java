@@ -1,18 +1,19 @@
+package calculator;
+
 import java.util.*;
 
 public class CalculatorFunction {
-
+  /*
   public static void main(String[] args) {
     CalculatorFunction cf = new CalculatorFunction();
-    /*
+
     CalculatorFunction.BasicOp basicOp = cf.new BasicOp();
     basicOp.doCalculation();
-    */
-    /*
+
     CalculatorFunction.ExpOp expOp = cf.new ExpOp();
     expOp.pow(2.5,5.4);
     expOp.square(121);
-    */
+
     CalculatorFunction.AdvancedOp adOp = cf.new AdvancedOp();
     adOp.factorial(6);
     adOp.primeCheck(34);
@@ -21,6 +22,7 @@ public class CalculatorFunction {
     adOp.GCD(50,122);
     adOp.LCM(7,31);
   }
+  */
 
   class BasicOp {
 
