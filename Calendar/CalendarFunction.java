@@ -5,24 +5,25 @@ import java.util.*;
 
 // current date
 public class CalendarFunction{
-  /*
+
   public static void main(String[] args) {
     //for testing
-    //currentDate();
+    currentDate();
     //futureDay(3);
     //futureDay(-3);
     //futureMonth(5);
-    futureYear(-2);
+    //futureYear(-2);
   }
-  */
+
 
   public static void currentDate() {
     Calendar calendar = Calendar.getInstance();
     System.out.println("The current date is: " + calendar.getTime());
     String[] split = calendar.getTime().toString().split("\\s+");
-    SimpleTTS.say("The current date is: " + split[0] + " " + split[1] + " " + split[2] + " " + split[5]);
+    String say = "The current date is: " + split[0] + " " + split[1] + " " + split[2] + " " + split[5];
+    SimpleTTS.say(say);
   }
-
+  /*
   //future or past day
   public static void futureDay(int n) {
     Calendar calendar = Calendar.getInstance();
@@ -64,5 +65,6 @@ public class CalendarFunction{
       SimpleTTS.say("The date " + Math.abs(n) + " years ago is: " + split[0] + " " + split[1] + " " + split[2] + " " + split[5]);
     }
   }
+  */
 
 }
