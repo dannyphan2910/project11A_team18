@@ -1,8 +1,8 @@
 # **_OLLIE_** :bird:(project11A_team18)
 
-### Creators: Ydalia Molina:girl:, Danny Phan:boy:, Isabel Tse:girl:
+### **_Creators:_** Ydalia Molina:girl:, Danny Phan:boy:, Isabel Tse:girl:
 
-#### **Description:**
+#### **_Description:_**
 *Ollie* is our team's minimal viable design of a *Siri* inspired intelligent assistant operated through text-based input. Named to reference Brandeis' Ollie the Owl mascot, our product carries the symbolic meaning of wisdom and how this program can help one gain knowledge more efficiently.  It has 4 main functions as outlined below:
 
 *1. Weather*
