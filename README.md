@@ -8,17 +8,17 @@
 *1. Weather*
 :earth_asia::sunny::jp::snowflake::us::cyclone::fr::umbrella::uk::snowman::it::zap:
 
-Inquire about the weather in any city on earth, and Ollie will tell you the temperature in degrees Celsius or Fahrenheit and give you a future forecast. 
+Inquire about the weather in any city on earth, and Ollie will tell you the temperature in degrees Celsius or Fahrenheit and give you a future forecast. We coded this using OpenWeatherMap's API for current weather data (with accessable API key), then created a class that corresponds with relevant data in the JSON file, which is then parsed using GSON.
 
 *2. Calculator*
 :heavy_plus_sign::heavy_multiplication_x::heavy_division_sign::heavy_check_mark:
 
-When your mental math abilities fail you, Ollie can step in. It has the ability to calculate the following operations: addition, subtraction, multiplication, division, square root, exponent(power), LCM, GCD, prime number verification, factorials.
+When your mental math abilities fail you, Ollie can step in. It has the ability to calculate operations categorized into three levels. First, we have simple calculations: addition, subtraction, multiplication, division. Second, we have exponentiation-related calculations: square root, and power. And third, we have advanced calculations: Lowest Common Multiple (LCM), Greatest Common Denominator (GCD), prime number verification, and factorials. We coded this using simple arithmetic and instance methods from Java's math class. 
 
 *3. Calendar*
 :date::hourglass:
 
-Have you ever forgotten what day of the month it is? Or what day of the week? Well, Ollie's got your back. It can give the user information on the present date, past dates, as well as future dates (in the form of day, month, and year). 
+Have you ever forgotten what day of the month it is? Or what day of the week? Well, Ollie's got your back. It can give the user information on the present date, past dates, as well as future dates (in the form of day, month, and year).
 
 *4. Google Search*
 :mag::pencil::computer:
