@@ -1,6 +1,6 @@
-# **_OLLIE_** 🦉 by DIY Code
+# **_OLLIE_** 🦉+🤖 by DIY Code
 
-### **_Creators:_** Ydalia Molina👧🏻, Danny Phan🤴🏻, Isabel Tse🙆🏻‍♀️
+### **_Creators:_** Ydalia Molina🙋🏻‍♀️, Danny Phan💆🏻‍♂️, Isabel Tse🙆🏻‍♀️
 
 #### **_Description:_**
 *Ollie* is our team's minimal viable design of a *Siri* inspired intelligent assistant operated through text-based input. Named to reference Brandeis' Ollie the Owl mascot, our product carries the symbolic meaning of wisdom and how this program can help one gain knowledge more efficiently.  It has 4 main functions as outlined below:
