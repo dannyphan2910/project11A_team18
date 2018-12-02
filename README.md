@@ -1,4 +1,4 @@
-# **_OLLIE_** :bird:(project11A_team18)
+# **_OLLIE_** 🦉 by DIY Code
 
 ### **_Creators:_** Ydalia Molina:girl:, Danny Phan:boy:, Isabel Tse:girl:
 
