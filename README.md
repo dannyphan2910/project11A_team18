@@ -14,9 +14,14 @@ Inquire about the weather in any city on earth, and Ollie will tell you the temp
 :heavy_plus_sign::heavy_multiplication_x::heavy_division_sign::heavy_check_mark:
 
 When your mental math abilities fail you, Ollie can step in. It has the ability to calculate operations categorized into three levels:
+
 First, we have simple calculations: addition, subtraction, multiplication, division. 
+
 Second, we have exponentiation-related calculations: square root, and power. 
-And third, we have advanced calculations: Lowest Common Multiple (LCM), Greatest Common Denominator (GCD), prime number verification, and factorials. 
+
+And third, we have advanced calculations: Lowest Common Multiple (LCM), Greatest Common Denominator (GCD), prime number 
+verification, and factorials. 
+
 We coded this using simple arithmetic and instance methods from Java's math class. 
 
 *3. Calendar*
