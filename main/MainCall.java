@@ -32,7 +32,7 @@ public class MainCall {
     input = scan.nextLine();
     System.out.println();
 
-    while (!(input.contains("Goodbye Ollie")) {
+    while (!(input.contains("Goodbye Ollie"))) {
 
       if (checkInput(helloWords,input)) {
 
