@@ -13,14 +13,8 @@ import org.jsoup.select.Elements;
 //java -classpath ".:jsoup-1.10.2.jar:SimpleTTS.jar" SearchFunction
 
 public class SearchFunction {
-	/*
-	public static void main(String[] args) {
-		//for testing
-		search("Williamstown");
-	}
-	*/
-	public static void search(String searchText) {
 
+	public static void search(String searchText) {
 		String encoding = "UTF-8";
 
 		try {
@@ -29,28 +23,16 @@ public class SearchFunction {
 			Elements webLinks = google.getElementsByTag("cite");
 
 			//Check if any results found
-			if (webLinks.isEmpty()) {
-				System.out.println("No results found.");
-				return;
-			}
+			if (!(webLinks.isEmpty())) {
+				System.out.printf("Here are the search results for '%s': %n%n",searchText);
 
-			//to display everything:
-			//webLinks.forEach(link->System.out.println(link.text()));
-
-			//to display only the first:
-			//String firstLink = webLinks.get(0).text();
-			//System.out.println(firstLink);
-
-			//to open the site:
-			//openWebpage(firstLink);
-
-			System.out.printf("Here are the search results for '%s': %n%n",searchText);
-			SimpleTTS.say("Here are the search results for " + searchText);
-
-			for (int i = 0; i < 5; i++) {
-				if (webLinks.get(i).text().contains("https://")) {
-					System.out.println(webLinks.get(i).text());
+				for (int i = 0; i < 5; i++) {
+					if (webLinks.get(i).text().contains("https://")) {
+						System.out.println(webLinks.get(i).text());
+					}
 				}
+			} else {
+				System.out.println("No results found. 😥");
 			}
 
 		} catch (IOException e) {
