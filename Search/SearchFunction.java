@@ -9,9 +9,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-//javac -classpath ".:jsoup-1.10.2.jar:SimpleTTS.jar" SearchFunction.java
-//java -classpath ".:jsoup-1.10.2.jar:SimpleTTS.jar" SearchFunction
-
 public class SearchFunction {
 
 	public static void search(String searchText) {
@@ -40,13 +37,4 @@ public class SearchFunction {
 		}
 
 	}
-	/*
-	public static void openWebpage(String urlString) {
-    try {
-        Desktop.getDesktop().browse(new URI(urlString));
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-	}
-	*/
 }

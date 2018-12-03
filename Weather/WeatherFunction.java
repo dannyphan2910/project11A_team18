@@ -9,11 +9,8 @@ import java.util.List;
 import com.google.gson.Gson;
 import java.util.*;
 
-// javac -cp ".:gson-2.8.5.jar:SimpleTTS.jar" WeatherFunction.java
-// java -cp ".:gson-2.8.5.jar:SimpleTTS.jar" WeatherFunction
-
 public class WeatherFunction {
-  
+
   public static void getWeather(String location) {
     Weather weather = locationForWeather(location);
 
