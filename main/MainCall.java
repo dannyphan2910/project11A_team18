@@ -49,9 +49,9 @@ public class MainCall {
 
       } else if (checkInput(jokesWords,input)) {
 
-      	System.out.println("Where is Macau located?");
-        System.out.println("Mafarm.");
-        System.out.println("Hahaha I'm so funny!  😂");
+      	System.out.println("Did you hear the one about the little mountain?  🏔⛰");
+        System.out.println("It's hill-arious!  😂");
+
       } else if (checkInput(functionInfoWords,input)) {
 
         introduction();
