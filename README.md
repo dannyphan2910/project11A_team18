@@ -6,7 +6,7 @@
 *Ollie* is our team's minimal viable design of a *Siri* inspired intelligent assistant operated through text-based input. Named to reference Brandeis' Ollie the Owl mascot, our product carries the symbolic meaning of wisdom and how this program can help one gain knowledge more efficiently.  It has 4 main functions as outlined below:
 
 *1. Weather*
-:earth_asia::sunny::jp::snowflake::us::cyclone::fr::umbrella::uk::snowman::it::zap:
+:earth_asia::sunny::jp::snowflake::us::cyclone:
 
 Inquire about the weather in any city on earth, and Ollie will tell you the temperature in degrees Celsius or Fahrenheit and give you a future forecast. We coded this using OpenWeatherMap's API for current weather data (with accessable API key), then created a class that corresponds with relevant data in the JSON file, which is then parsed using GSON.
 
