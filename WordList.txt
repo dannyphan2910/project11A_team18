@@ -1,4 +1,4 @@
-﻿WordList: (Calculator, Calendar, Search, and Weather)
+﻿WordList: (Calculator, Calendar, Search, Weather, and others)
 __________________________________________
 
 
@@ -13,15 +13,15 @@ Calculator :
 6. Calculate
 7. Equal
 8. Math
-9. Solution
-10. Difference
+9. /
+10. *
 11. Decrease
 12. Deduct
 13. Multiply
 14. Product
-15. Times
+15. Calculator
 16. Division
-17.  Divide
+17. Divide
 18. Greatest Common Denominator
 19. GCD
 20. LCD
@@ -30,8 +30,10 @@ Calculator :
 23. Mean
 24. Power
 25. Exponent
-26. Base
+26. Calculation
 27. Raised to
+28. +
+29. -
 
 
 ___________________________________________
@@ -45,7 +47,7 @@ Calendar :
 3. Decade
 4. Annual
 5. Age
-6. Leap
+6. 2018
 7. Minute
 8. Second
 9. Year
@@ -63,7 +65,6 @@ Calendar :
 21. Friday
 22. Saturday
 23. Sunday
-24. 2018
 
 
 ___________________________________________
@@ -102,3 +103,66 @@ Weather :
 28. Winter
 29. Summer
 30. Fall
+
+
+
+___________________________________________
+
+
+How are you questions
+
+
+1. How are you
+2. How are you doing
+3. Are you well
+
+___________________________________________
+
+
+Hello 
+
+
+1. Hello
+2. Hey
+3. Greetings
+4. What’s up
+5. Sup
+6. Bonjour
+7. Hola
+8. Namaste
+9. How do you do
+10. Nice to meet you
+
+___________________________________________
+
+
+Jokes questions
+
+
+1. Tell me a joke
+2. Say a joke
+3. What's a good joke
+
+___________________________________________
+
+
+Where are you from questions
+
+
+1. Where are you from
+2. Where were you born
+3. Where did you grow up
+4. Where do you live
+5. Where is your home
+6. Where do you come from
+7. Do you have a house
+
+___________________________________________
+
+
+Re-informating functionality
+
+
+1. What do you do
+2. What can you do
+3. What are your functions
