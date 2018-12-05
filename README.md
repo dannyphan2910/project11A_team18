@@ -32,11 +32,12 @@ Have you ever forgotten what day of the month it is? Or what day of the week? We
 *4. Google Search*
 :mag::pencil::computer:
 
-Have a question that Ollie does not directly have an answer for? Not a problem at all. The user will be directed to a Google search result link as a lead to the answer.
+Have a question that Ollie does not directly have an answer for? Not a problem at all. The user will be directed to a Google search result link as a lead to the answer. The function uses jsoup Java HTML Parser to get results from Google. 
 
 
 
-For a list of all the words associated to trigger each function click here: https://github.com/dannyphan2910/project11A_team18/blob/master/WordList.txt
+For a list of all the words associated to trigger each function, [*click here*](https://github.com/dannyphan2910/project11A_team18/blob/master/WordList.txt).
 
-Check out our team's information here:
-https://github.com/dannyphan2910/project11A_team18/tree/master/creators_info
+Check out our team's information [*here*](https://github.com/dannyphan2910/project11A_team18/tree/master/creators_info).
+
+For detailed information on how to run Ollie, [*click here*](https://github.com/dannyphan2910/project11A_team18/blob/master/Instructions.txt).
