@@ -1,0 +1,12 @@
+Instructions for running **Ollie** the (adorable) personal assistant 🦉:
+
+1. Download the necessary files (each folder is in charge of each function, so please don't forget any of Ollie's wonders!)
+2. Download the .jar files:
+  - Weather function: GSON: https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar to parse the weather information in JSON format from OpenWeatherMap API (https://openweathermap.org/api)
+  - Search function: jsoup: https://jsoup.org/download 
+3. Add the .jar files into the right folders (and unzip them in the parent directory using terminal).
+  Example: % unzip jsoup-1.10.2.jar
+4. Compile the packages (calculator, calendar, search, weather) in the parent directory.
+5. Compile the main package! (% javac -d . main/*.java)
+6. Run Ollie!!! (% java main/MainCall)
+7. Enjoy! ❤️
