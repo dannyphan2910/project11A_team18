@@ -18,7 +18,7 @@ public class MainCall {
   public static String[] calendarWords = {"Date", "Day", "Decade", "Annual", "Age", "Minute", "Second", "Year", "Time", "Month", "Calendar", "Schedule", "Daytime", "Night Time", "Afternoon", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "2018"};
 
   public static String[] howAreYouWords = {"How are you", "How are you doing", "Are you well"};
-  public static String[] jokesWords = {"Tell me a joke", "Say a joke", "What's a good joke?"};
+  public static String[] jokesWords = {"Tell me a joke", "Say a joke", "What's a good joke"};
   public static String[] whereAreYouFromWords = {"Where are you from", "Where were you born", "Where did you grow up","Where do you live","Where is your home","Where do you come from","Do you have a house"};
   public static String[] helloWords = {"Hello", "Hey", "Greetings", "What’s up", "Sup", "Bonjour","Hola","Namaste","How do you do","Nice to meet you"};
   public static String[] functionInfoWords = {"What do you do","What can you do","What are your functions"};
@@ -165,7 +165,9 @@ public class MainCall {
     System.out.println();
     System.out.println("👋🏼  Hello, I'm Ollie the Owl 🦉  + 🤖  Your new personal assistant!");
     System.out.println();
-    System.out.println(" I can help you out on things like : ");
+    System.out.println(" Let's be friends! 💌  You can ask me anything!");
+    System.out.println(" Ollie is still a baby owl, so Ollie might make some mistakes... 😔");
+    System.out.println(" but I am willing to help you out on things like : ");
     System.out.println();
     System.out.println("    Doing Calculations  🔢 ");
     System.out.println("    Checking the Calendar/Date  📆 ");
@@ -174,7 +176,7 @@ public class MainCall {
     System.out.println();
     System.out.println("👋🏼  To exit my program simply type 'Goodbye Ollie' (case (very) sensitive!) 👋🏼 ");
     System.out.println();
-    System.out.println(" For more information check our company page DYI Code, INC © : ");
+    System.out.println(" For more information check my parents' company page DYI Code, INC © : ");
     System.out.println("     https://github.com/dannyphan2910/project11A_team18        ");
     System.out.println("__________________________________________________________________");
   }
